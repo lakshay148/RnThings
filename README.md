@@ -1,10 +1,10 @@
 # RnThings
 Repo Containing Demos/integration flows of React Native Things
 
-#Integrations : 
+# Integrations :
 react - navigation
 
-#Upcoming Integrations
+# Upcoming Integrations
 AppCenter : CodePush
 Redux
 
