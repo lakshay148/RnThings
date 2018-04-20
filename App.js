@@ -12,6 +12,15 @@ import {
   View
 } from 'react-native';
 import codePush from "react-native-code-push";
+import { StackNavigator } from 'react-navigation';
+import SimpleForm from "ui/SimpleForm";
+import CategorizedList from 'granulars/CategorizedList';
+import HomeComponent from 'ui/HomeComponent';
+
+const myStack = StackNavigator({
+    home : { screen : HomeComponent },
+    form : { screen: SimpleForm}
+});
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -26,7 +35,7 @@ class App extends Component<Props> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          lakshay test
         </Text>
         <Text style={styles.instructions}>
           To get started, edit App.js
@@ -62,5 +71,5 @@ const styles = StyleSheet.create({
 });
 
 
-App = codePush(codePushOptions)(App);
+App = codePush(codePushOptions)(myStack);
 export  default  App;
