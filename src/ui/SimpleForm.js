@@ -11,7 +11,7 @@ class SimpleForm extends Component {
 
     render(){
         return (<View style={styles.container}>
-            <Text style={styles.center}>Welcome to sample form in RN</Text>
+            <Text style={styles.textcenter}>Welcome to sample form in RN</Text>
             <TextInput placeholder="Enter name here"/>
             <TextInput placeholder="Enter email id "/>
             <View style={styles.buttonStyle}>
@@ -24,7 +24,13 @@ class SimpleForm extends Component {
 const styles = StyleSheet.create({
     center : {
         alignItems : 'center',
-        alignSelf:'center'
+        alignSelf:'center',
+    },
+    textcenter : {
+        alignItems : 'center',
+        alignSelf:'center',
+        fontSize : 20,
+        fontWeight : 'bold'
     },
     container : {
         padding : 10

@@ -9,6 +9,7 @@ import {
 import CategorizedList from "granulars/CategorizedList";
 import Toast from 'react-native-simple-toast';
 import * as Strings from 'values/Strings';
+import CardView from "react-native-cardview";
 
 class HomeComponent extends Component {
 
@@ -48,9 +49,15 @@ class HomeComponent extends Component {
 
     render(){
         return (<View style={styles.container}>
-           <CategorizedList
-               data={this.props.data}
-               onClick={this.onClickItem.bind(this)}/>
+            <CardView
+                cardElevation={2}
+                cardMaxElevation={2}
+                cornerRadius={5}
+            >
+               <CategorizedList
+                   data={this.props.data}
+                   onClick={this.onClickItem.bind(this)}/>
+            </CardView>
         </View>)
     }
 
