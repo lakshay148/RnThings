@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import * as Colors from 'values/Colors'
 import * as Constants from 'values/Constants'
+import PropTypes from "prop-types";
 
 /**    AUTHOR :
 *      Lakshay
@@ -23,6 +24,10 @@ import * as Constants from 'values/Constants'
 
 class CategorizedList extends Component {
 
+    static propTypes = {
+        data : PropTypes.array.isRequired,
+        onClick : PropTypes.func.isRequired,
+    }
 
     static defaultProps = {
         // data : [{
@@ -61,7 +66,7 @@ class CategorizedList extends Component {
             </View>)
         } else if ( item.type == Constants.ITEM_TYPE_LIST_ITEM){
             return (<View key={item.text} style={styles.listItem}>
-                <TouchableHighlight underlayColor={Colors.LIGHT_GRAY} onPress={this.onClick.bind(this, item.text)}>
+                <TouchableHighlight underlayColor={Colors.LIGHT_GRAY} onPress={this.onClick.bind(this, item)}>
                     <Text>{item.text}</Text>
                 </TouchableHighlight>
             </View>)

@@ -22,3 +22,12 @@ export const TRANSPARENT = '#00000000';
 export const HEADER_BG = '#f0f0f0';
 export const HEADER_TEXT = '#606060';
 export const DIVIDER = '#e9e9e9';
+export const DEFAULT_SECONDARY_COLOR = '#F47B54';
+
+
+//Chip customisation
+export const CHIP_BORDER_COLOR = '#4f4f4f';
+export const CHIP_DEFAULT_COLOR = '#ffffff';
+export const CHIP_TEXT_COLOR_SELECTED = '#ffffff';
+export const CHIP_TEXT_COLOR_DEFAULT = '#6b6b6b';
+export const CHIP_SELECTED_COLOR = "#f79979"
