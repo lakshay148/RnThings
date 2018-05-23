@@ -11,7 +11,9 @@ import Toast from 'react-native-simple-toast';
 import * as Strings from 'values/Strings';
 import CardView from "react-native-cardview";
 import * as Colors from "values/Colors"
+import firebase from "react-native-firebase"
 
+firebase.crashlytics().log("my test message");
 class HomeComponent extends Component {
 
     static navigationOptions = {
@@ -53,16 +55,48 @@ class HomeComponent extends Component {
             type : "ListItem",
             content : "node",
             text : "Firebase",
-            id : 101
+            id : 101,
+            categories: [{
+                type : "ListItem",
+                text : "Remote Config ",
+                content : "leaf",
+                navigateTo : '',
+            }, {
+                type : "ListItem",
+                text : "Crashlytics",
+                content : "leaf",
+                navigateTo : "",
+            },{
+                type : "ListItem",
+                text : "Analytics",
+                content : "leaf",
+                navigateTo : "",
+            }]
         }, {
             type : "header",
             text : "Deployment",
         },{
             type : "ListItem",
             text : "AppCenter/CodePush",
-            content : "node"
+            content : "node",
+            categories: [{
+                type : "ListItem",
+                text : "Integration Steps ",
+                content : "leaf",
+                navigateTo : 'form',
+            }, {
+                type : "ListItem",
+                text : "Demo",
+                content : "leaf",
+                navigateTo : "list",
+            }]
+        },{
+            type : "ListItem",
+            text : "Another testgr",
+            content : "node",
+
         }]
-    }
+    };
 
     render(){
         return (<View style={styles.container}>
@@ -79,9 +113,9 @@ class HomeComponent extends Component {
     }
 
     onClickItem(item){
-        if(item.content == 'leaf'){
+        if(item.content === 'leaf'){
             Toast.show(Strings.COMING_SOON + " "+item.text)
-        } else if (item.content == "node"){
+        } else if (item.content === "node"){
             //TODO get from store the categories with respect to list of sections here
             this.props.navigation.navigate('categories',{ categories : item.categories})
         }

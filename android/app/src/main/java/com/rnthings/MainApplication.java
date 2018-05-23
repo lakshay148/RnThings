@@ -3,6 +3,7 @@ package com.rnthings;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import io.invertase.firebase.RNFirebasePackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.kishanjvaghela.cardview.RNCardViewPackage;
 import com.microsoft.codepush.react.CodePush;
@@ -13,6 +14,7 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+import io.invertase.firebase.fabric.crashlytics.RNFirebaseCrashlyticsPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,7 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected String getJSBundleFile() {
         return CodePush.getJSBundleFile();
         }
-    
+
     @Override
     public boolean getUseDeveloperSupport() {
       return BuildConfig.DEBUG;
@@ -35,12 +37,14 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNFirebasePackage(),
             new VectorIconsPackage(),
             new RNCardViewPackage(),
             new CodePush(getResources().getString(R.string.reactNativeCodePush_androidDeploymentKey), getApplicationContext(), BuildConfig.DEBUG),
             new AppCenterReactNativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
             new AppCenterReactNativeAnalyticsPackage(MainApplication.this, getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics)),
-            new AppCenterReactNativePackage(MainApplication.this)
+            new AppCenterReactNativePackage(MainApplication.this),
+              new RNFirebaseCrashlyticsPackage()
       );
     }
 

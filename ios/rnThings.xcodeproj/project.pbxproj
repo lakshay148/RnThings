@@ -57,6 +57,7 @@
 		CBC35CB7B8404A809118ABDC /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F732DC2C32314FDDB34FB8C4 /* Octicons.ttf */; };
 		6FB1E8CA4E5F46698CC90F40 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8DD32118744BCE8F798F8A /* SimpleLineIcons.ttf */; };
 		4A8691163E864419915EF109 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D97C01D367344ACFBC7BB387 /* Zocial.ttf */; };
+		B371BC9C5A364880B2955633 /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B42B4604381141DB89715E92 /* libRNFirebase.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -389,6 +390,8 @@
 		F732DC2C32314FDDB34FB8C4 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		AF8DD32118744BCE8F798F8A /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		D97C01D367344ACFBC7BB387 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4E69D99B1FBE4B159260A578 /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; name = "RNFirebase.xcodeproj"; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		B42B4604381141DB89715E92 /* libRNFirebase.a */ = {isa = PBXFileReference; name = "libRNFirebase.a"; path = "libRNFirebase.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -425,6 +428,7 @@
 				C41181D542AF40FA83EFE80F /* libLRDRCTSimpleToast.a in Frameworks */,
 				416A39821A4E422C9A911C31 /* libRNCardView.a in Frameworks */,
 				30D8808F058C4540890BC987 /* libRNVectorIcons.a in Frameworks */,
+				B371BC9C5A364880B2955633 /* libRNFirebase.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +623,7 @@
 				9D2FEF2125DB4FB29A3AC152 /* LRDRCTSimpleToast.xcodeproj */,
 				CB0FC0F8BF7C480AABF591A5 /* RNCardView.xcodeproj */,
 				6F9F797CC5F04092BA34F3C8 /* RNVectorIcons.xcodeproj */,
+				4E69D99B1FBE4B159260A578 /* RNFirebase.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1285,6 +1290,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1295,6 +1301,7 @@
 					"$(SRCROOT)/../node_modules/react-native-simple-toast/ios/LRDRCTSimpleToast",
 					"$(SRCROOT)/../node_modules/react-native-cardview/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 			};
 			name = Debug;
@@ -1322,6 +1329,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1332,6 +1340,7 @@
 					"$(SRCROOT)/../node_modules/react-native-simple-toast/ios/LRDRCTSimpleToast",
 					"$(SRCROOT)/../node_modules/react-native-cardview/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 			};
 			name = Release;
@@ -1360,6 +1369,7 @@
 					"$(SRCROOT)/../node_modules/react-native-simple-toast/ios/LRDRCTSimpleToast",
 					"$(SRCROOT)/../node_modules/react-native-cardview/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 			};
 			name = Debug;
@@ -1387,6 +1397,7 @@
 					"$(SRCROOT)/../node_modules/react-native-simple-toast/ios/LRDRCTSimpleToast",
 					"$(SRCROOT)/../node_modules/react-native-cardview/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 			};
 			name = Release;
@@ -1423,6 +1434,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1433,6 +1445,7 @@
 					"$(SRCROOT)/../node_modules/react-native-simple-toast/ios/LRDRCTSimpleToast",
 					"$(SRCROOT)/../node_modules/react-native-cardview/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 			};
 			name = Debug;
@@ -1469,6 +1482,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1479,6 +1493,7 @@
 					"$(SRCROOT)/../node_modules/react-native-simple-toast/ios/LRDRCTSimpleToast",
 					"$(SRCROOT)/../node_modules/react-native-cardview/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 			};
 			name = Release;
@@ -1514,6 +1529,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1524,6 +1540,7 @@
 					"$(SRCROOT)/../node_modules/react-native-simple-toast/ios/LRDRCTSimpleToast",
 					"$(SRCROOT)/../node_modules/react-native-cardview/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 			};
 			name = Debug;
@@ -1559,6 +1576,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1569,6 +1587,7 @@
 					"$(SRCROOT)/../node_modules/react-native-simple-toast/ios/LRDRCTSimpleToast",
 					"$(SRCROOT)/../node_modules/react-native-cardview/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 			};
 			name = Release;
