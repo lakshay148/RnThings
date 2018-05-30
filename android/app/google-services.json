@@ -1,0 +1,103 @@
+{
+  "project_info": {
+    "project_number": "17475730375",
+    "firebase_url": "https://concrete-zephyr-123305.firebaseio.com",
+    "project_id": "concrete-zephyr-123305"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17475730375:android:9a993ec8bfc41cda",
+        "android_client_info": {
+          "package_name": "com.lakshay.androidthings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "17475730375-3oadmr1464n6b1c7ijh7gkevr687vltr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD5lWJAyBclL9cvV9JGoGW9GJfQ3WoTzM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17475730375:android:7dbd01deca5a46dd",
+        "android_client_info": {
+          "package_name": "com.recipe_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "17475730375-3oadmr1464n6b1c7ijh7gkevr687vltr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD5lWJAyBclL9cvV9JGoGW9GJfQ3WoTzM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17475730375:android:8e1f3fcd68adfab8",
+        "android_client_info": {
+          "package_name": "com.rnthings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "17475730375-3oadmr1464n6b1c7ijh7gkevr687vltr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD5lWJAyBclL9cvV9JGoGW9GJfQ3WoTzM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
