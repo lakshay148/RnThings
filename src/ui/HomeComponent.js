@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import {
     StyleSheet,
-    Text,
-    View,
-    TouchableHighlight,
-    Button
+    ScrollView
 } from 'react-native';
-import {CategorizedList} from "granulars";
+import { CategorizedList } from "granulars";
 import Toast from 'react-native-simple-toast';
 import * as Strings from 'values/Strings';
 import CardView from "react-native-cardview";
@@ -17,107 +14,146 @@ firebase.crashlytics().log("my test message");
 class HomeComponent extends Component {
 
     static navigationOptions = {
-        title: 'Home',
+        title: 'React Native Things',
     };
 
-    //content can be leaf/node
+    //content can be soon/node
     static defaultProps = {
         data : [{
+            id:"RN_001",
             type : "header",
-            text : "Develop",
+            text : "Basics",
         },{
+            id:"RN_001",
             type : "ListItem",
-            text : "UI",
-            content : "node",
-            categories: [{
-                type : "ListItem",
-                text : "Simple Form ",
-                content : "leaf",
-                navigateTo : 'form',
-            }, {
-                type : "ListItem",
-                text : "Simple List ",
-                content : "leaf",
-                navigateTo : "list",
-            }]
+            text : "ES6",
+            content : "soon",
         },{
+            id:"RN_001",
+            type : "ListItem",
+            text : "JSX",
+            content : "soon",
+        },{
+            id:"RN_001",
+            type : "ListItem",
+            text : "Components",
+            content : "soon",
+        },{
+            id:"RN_001",
+            type : "ListItem",
+            text : "State/Props",
+            content : "soon",
+        },{
+            id:"RN_001",
+            type : "header",
+            text : "UI",
+        },{
+            id:"RN_001",
+            type : "ListItem",
+            text : "Form Elements",
+            content : "leaf",
+            navigateTo : "form"
+        },{
+            id:"RN_001",
+            type : "ListItem",
+            text : "Handling Images",
+            content : "soon",
+        },{
+            id:"RN_001",
+            type : "ListItem",
+            text : "List",
+            content : "leaf",
+            navigateTo : "list"
+        },{
+            id:"RN_001",
+            type : "ListItem",
+            text : "Dialogs",
+            content : "soon"
+        },{
+            id:"RN_001",
+            type : "header",
+            text : "Navigation",
+        },{
+            id:"RN_001",
             type : "ListItem",
             text : "ReactNavigation",
-            content : "leaf"
+            content : "soon"
         },{
+            id:"RN_001",
+            type : "header",
+            text : "Networking",
+        },{
+            id:"RN_001",
+            type : "ListItem",
+            text : "Fetch",
+            content : "soon"
+        },{
+            id:"RN_001",
+            type : "ListItem",
+            text : "Axios",
+            content : "soon"
+        },{
+            id:"RN_001",
+            type : "header",
+            text : "DataStore",
+        },{
+            id:"RN_001",
+            type : "ListItem",
+            text : "AsyncStorage",
+            content : "soon",
+        },{
+            id:"RN_001",
             type : "ListItem",
             text : "Redux",
-            content : "leaf"
+            content : "soon",
         },{
-            type : "header",
-            text : "Config & Analysis",
-        },{
+            id:"RN_001",
             type : "ListItem",
-            content : "node",
-            text : "Firebase",
-            id : 101,
-            categories: [{
-                type : "ListItem",
-                text : "Remote Config ",
-                content : "leaf",
-                navigateTo : '',
-            }, {
-                type : "ListItem",
-                text : "Crashlytics",
-                content : "leaf",
-                navigateTo : "",
-            },{
-                type : "ListItem",
-                text : "Analytics",
-                content : "leaf",
-                navigateTo : "",
-            }]
-        }, {
-            type : "header",
-            text : "Deployment",
-        },{
-            type : "ListItem",
-            text : "AppCenter/CodePush",
-            content : "node",
-            categories: [{
-                type : "ListItem",
-                text : "Integration Steps ",
-                content : "leaf",
-                navigateTo : 'form',
-            }, {
-                type : "ListItem",
-                text : "Demo",
-                content : "leaf",
-                navigateTo : "list",
-            }]
-        },{
-            type : "ListItem",
-            text : "Another testgr",
-            content : "node",
+            text : "GraphQL",
+            content : "soon",
 
+        },{
+            id:"RN_001",
+            type : "header",
+            text : "Integrations",
+        },{
+            id:"RN_001",
+            type : "ListItem",
+            text : "Firebase",
+            content : "soon",
+        },{
+            id:"RN_001",
+            type : "ListItem",
+            text : "Codepush",
+            content : "soon",
+        },{
+            id:"RN_001",
+            type : "ListItem",
+            text : "Bitrise",
+            content : "soon",
         }]
     };
 
     render(){
-        return (<View style={styles.container}>
+        return (<ScrollView style={styles.container}>
             <CardView
                 cardElevation={2}
                 cardMaxElevation={2}
-                cornerRadius={5}
-            >
+                cornerRadius={5}>
                <CategorizedList
                    data={this.props.data}
                    onClick={this.onClickItem.bind(this)}/>
             </CardView>
-        </View>)
+        </ScrollView>)
     }
 
     onClickItem(item){
-        if(item.content === 'leaf'){
-            Toast.show(Strings.COMING_SOON + " "+item.text)
+        if(item.content === 'soon'){
+            Toast.show(item.text + Strings.COMING_SOON )
         } else if (item.content === "node"){
-            //TODO get from store the categories with respect to list of sections here
             this.props.navigation.navigate('categories',{ categories : item.categories})
+        } else {
+            this.props.navigation.navigate(item.navigateTo)
         }
     }
 
@@ -132,14 +168,14 @@ const styles = StyleSheet.create({
         backgroundColor : Colors.WHITE,
     },
     center : {
-        alignItems: 'center',
+        alignItems: "center",
         alignSelf: "center",
 
     },
     buttonStyle : {
         marginTop : 50
     }
-})
+});
 
 export default HomeComponent;
 

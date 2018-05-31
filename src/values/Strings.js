@@ -1,1 +1,1 @@
-export const COMING_SOON = "Feature Coming Soon !!"
+export const COMING_SOON = " Coming Soon !!";

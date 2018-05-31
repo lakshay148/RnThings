@@ -22,13 +22,13 @@ class SimpleForm extends Component {
 
     static navigationOptions = {
         title : "My Simple Form "
-    }
+    };
 
     static defaultProps = {
         onCheckChanged : () => console.log("checkChanged"),
         onChipSelected : () => console.log("onChipSelected"),
         chipData : ['chip1', 'chip2' , 'chip3']
-    }
+    };
 
     render(){
         return (<View style={styles.container}>
@@ -72,5 +72,5 @@ const styles = StyleSheet.create({
     buttonStyle : {
         marginTop : 50
     }
-})
+});
 export default SimpleForm;

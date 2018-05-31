@@ -27,47 +27,21 @@ class CategorizedList extends Component {
     static propTypes = {
         data : PropTypes.array.isRequired,
         onClick : PropTypes.func.isRequired,
-    }
+    };
 
     static defaultProps = {
-        // data : [{
-        //     type : "header",
-        //     text : "Develop",
-        // },{
-        //     type : "ListItem",
-        //     text : "ReactNavigation",
-        //     content : "leaf"
-        // },{
-        //     type : "ListItem",
-        //     text : "Redux",
-        //     content : "leaf"
-        // },{
-        //     type : "header",
-        //     text : "Config & Analysis",
-        // },{
-        //     type : "ListItem",
-        //     content : "node",
-        //     text : "Firebase",
-        //     id : 101
-        // }, {
-        //     type : "header",
-        //     text : "Deployment",
-        // },{
-        //     type : "ListItem",
-        //     text : "AppCenter/CodePush",
-        //     content : "node"
-        // }]
-    }
+
+    };
 
     renderRow(item){
-        if(item.type == Constants.ITEM_TYPE_HEADER){
+        if(item.type === Constants.ITEM_TYPE_HEADER){
             return (<View key={item.text} style={styles.header}>
                 <Text style={styles.headerText}>{item.text}</Text>
             </View>)
-        } else if ( item.type == Constants.ITEM_TYPE_LIST_ITEM){
+        } else if ( item.type === Constants.ITEM_TYPE_LIST_ITEM){
             return (<View key={item.text} style={styles.listItem}>
                 <TouchableHighlight underlayColor={Colors.LIGHT_GRAY} onPress={this.onClick.bind(this, item)}>
-                    <Text>{item.text}</Text>
+                    <Text style={styles.textStyle}>{item.text}</Text>
                 </TouchableHighlight>
             </View>)
         }
@@ -101,7 +75,10 @@ const styles = StyleSheet.create({
     },
     headerText : {
         color:Colors.WHITE
+    },
+    textStyle : {
+        padding : 5
     }
-})
+});
 
 export default CategorizedList;

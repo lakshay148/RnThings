@@ -9,12 +9,17 @@ import codePush from "react-native-code-push";
 import { StackNavigator } from 'react-navigation';
 import { SimpleForm,SimpleList, HomeComponent } from "ui";
 import CategoriesComponent from "./src/ui/CategoriesComponent";
+import CardStackStyleInterpolator from "react-navigation/src/views/CardStack/CardStackStyleInterpolator"
 
 const myStack = StackNavigator({
     home : { screen : HomeComponent },
     form : { screen: SimpleForm},
     list : { screen : SimpleList },
     categories : { screen : CategoriesComponent},
+},{
+    transitionConfig: () => ({
+        screenInterpolator: (props) => CardStackStyleInterpolator.forHorizontal(props)
+    })
 });
 
 
